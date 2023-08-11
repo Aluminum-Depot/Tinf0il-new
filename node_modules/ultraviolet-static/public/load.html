@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Posthog-->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_pm81y7KNu1904rnTdFuACZton2NsuS5J1NWBJ1MLOcM',{api_host:'/sf'})
+</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5VBCB2YQN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G5VBCB2YQN');
+  </script> 
+  <script src="https://cdn.counter.dev/script.js" data-id="26de4bec-9f60-4b7f-aa35-2ca7517a3743" data-utcoffset="-6"></script>
+
+  <title>Tinf0il</title>
+  <link rel="icon" href="icon.png">
+  
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="styles/navbar.css" />
+  <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  
+</style>
+<body>
+  <div id="particles-js" style="width: 100vw; height: 100vh; z-index: -1;"></div>
+  
+  <div id="navbar"></div>
+  <script src="js/navbar.js"></script>
+  <div id="container">
+    <iframe frameborder="0" id="frame"></iframe>
+    <div id="gameInfo">
+        <div class="yes">
+            <img id="gameImage" alt="game icon">
+            <h3 id="gameTitle"></h3>
+        </div>
+        <p id="gameDescription"></p>
+        
+        <div id="menubtns">
+            <button onclick="history.back()"><i class="fa-solid fa-house"></i></button>
+            <button onclick="fullscreen()"><i class="fa-solid fa-expand"></i></button>
+        </div>
+    </div>
+    
+
+  </div>
+
+  <script src="./uv/uv.bundle.js"></script>
+  <script src="./uv/uv.config.js"></script>
+  <script src="./data/games.js"></script>
+  <script src="./data/apps.js"></script>
+  <script src="./data/utils.js"></script>
+  <script src="js/cloak.js"></script>
+  <script src="js/script.js"></script>
+  
+
+  <script>
+    if (window.parent.window.location == "about:blank") {
+        window.location.href = `/fullscreen.html${window.location.search}`
+    }
+
+    function fullscreen() {
+      const tab = window.open('about:blank', '_blank');
+      const iframe = tab.document.createElement('iframe');
+      const stl = iframe.style;
+      stl.border = stl.outline = 'none';
+      stl.width = '100vw';
+      stl.height = '100vh';
+      stl.position = 'fixed';
+      stl.left = stl.right = stl.top = stl.bottom = '0';
+      iframe.src = self.location;
+      tab.document.body.appendChild(iframe);
+    }
+
+    function blank(url) {
+      const tab = window.open('about:blank', '_blank');
+      const iframe = tab.document.createElement('iframe');
+      const stl = iframe.style;
+      stl.border = stl.outline = 'none';
+      stl.width = '100vw';
+      stl.height = '100vh';
+      stl.position = 'fixed';
+      stl.left = stl.right = stl.top = stl.bottom = '0';
+      iframe.src = url;
+      tab.document.body.appendChild(iframe);
+      //window.parent.window.location.replace('https://classroom.google.com')
+    }
+
+    const params = new URLSearchParams(window.location.search)
+    if (params.get("game")) {
+      games.forEach(game => {
+        if (game.id != params.get("game")) return
+        document.title = `${game.title} | Tinf0il`
+        document.querySelector("#gameImage").src = game.image
+        document.querySelector("#gameTitle").innerHTML = game.title
+        if (game.description) document.querySelector("#gameDescription").innerHTML = game.description
+        navigator.serviceWorker.register('./loadsw.js', {
+          scope: __uv$config.prefix
+        }).then(() => {
+          document.querySelector("#frame").src = __uv$config.prefix + __uv$config.encodeUrl(game.url);
+        });
+        
+      })
+    } else if (params.get("app")) {
+      
+      apps.forEach(app => {
+        if (app.id != params.get("app")) return
+        document.title = `${app.title} | Tinf0il`
+        document.querySelector("#gameImage").src = app.image
+        document.querySelector("#gameTitle").innerHTML = app.title
+        if (app.description) document.querySelector("#gameDescription").innerHTML = app.description
+        navigator.serviceWorker.register('./loadsw.js', {
+          scope: __uv$config.prefix
+          
+        }).then(() => {
+          document.querySelector("#frame").src = __uv$config.prefix + __uv$config.encodeUrl(app.url);
+          
+          if (app.fullscreen) document.querySelector("#footer").style.display = "none" 
+        });
+      })
+    } else if (params.get("util")) {
+      utils.forEach(util => {
+        if (util.id != params.get("utils")) return
+        document.title = `${util.title} | Tinf0il`
+        //document.querySelector("#gameImage").src = util.image
+        document.querySelector("#gameTitle").innerHTML = util.title
+        if (util.description) document.querySelector("#gameDescription").innerHTML = util.description
+        navigator.serviceWorker.register('./loadsw.js', {
+          scope: __uv$config.prefix
+        }).then(() => {
+          document.querySelector("#frame").src = __uv$config.prefix + __uv$config.encodeUrl(util.url);
+        });
+      })
+    }
+    
+    window.onbeforeunload = (event) => {
+      event.preventDefault();
+      return '';
+    }
+  </script>
+  
+  
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQDVFNNVD6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-YQDVFNNVD6');
+  </script>
+
+<!-- stats - count particles -->
+<div class="count-particles">
+  <span class="js-count-particles"></span>
+</div>
+
+<!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->    
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+<script>
+  /* ---- particles.js config ---- */
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "window", // weuben was an idiot here :>
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+
+/* ---- stats.js config ---- */
+
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+</script>
+
+</body>

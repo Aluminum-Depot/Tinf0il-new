@@ -1,0 +1,28 @@
+{
+  "name": "uv-app",
+  "version": "1.0.0",
+  "description": "Ultraviolet instance",
+  "type": "module",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@titaniumnetwork-dev/ultraviolet": "^1.0.10",
+    "@tomphttp/bare-server-node": "^1.2.5",
+    "express": "^4.18.2",
+    "ultraviolet-static": "file:Ultraviolet-Static"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.4"
+  }
+}
