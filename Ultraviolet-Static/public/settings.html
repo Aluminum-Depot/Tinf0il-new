@@ -30,6 +30,7 @@
     rel="stylesheet"/>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="settings.js" defer></script>
 
     <style>
         .navbar {
@@ -69,11 +70,250 @@
       </div>
     </div>
   </nav>
-<br>
-<br>
-<br>
-<br>
-<br>
-  <h1 style="color:#fff; text-align: center; font-family: monospace;">Coming soon!</h1>
+
+  <style>
+    .sidebar {
+      background-color: transparent;
+      width: 250px;
+      padding: 20px;
+      height: 75vh;
+      position: fixed;
+      left: 0;
+      top: 45px;
+      overflow-y: auto;
+    }
+    
+    .sidebar h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .sidebar li {
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+    
+    .section {
+      display: none;
+      transition: opacity 0.5s ease;
+      opacity: 0;
+    }
+    
+    .section.active {
+      display: block;
+      opacity: 1;
+    }
+    
+    .reset-button {
+      height: 40px;
+      padding: 0 20px;
+      font-size: 16px;
+      margin-left: 10px;
+      background-color: red;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      opacity: 0;
+      animation: fade-in 0.5s ease-in-out forwards;
+    }
+    
+    .reset-button:hover {
+      background-color: darkred;
+    }
+    
+    .sidebar-buttons {
+      position: absolute;
+      bottom: 0px;
+      width: 75%;
+    }
+
+    .config-input {
+    width: 400px; /* Adjust this value to your desired width */
+    }
+  
+    #save-button {
+    width: 200px; /* You can set a specific width if needed */
+    }
+
+    body {
+    margin: 0 20px; /* Add some margin to the left and right sides of the body */
+  }
+
+  .button {
+  background-color: #fff;
+  border: none;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: monospace
+  margin: 4px 2px;
+}
+
+  .button1 {border-radius: 8px;}
+          </style>  
+        </head>
+        <body>
+          <div class="second-bar">
+            <a href="/" title="Home" class="second-bar-link home-link"></a>
+            <a href="/games/" title="Games" class="second-bar-link games-link"></a>
+            <a href="/apps/" title="Apps" class="second-bar-link apps-link"></a>
+            <a href="/settings/" title="Settings" class="second-bar-link settings-link"></a>
+            <div class="info-menu" id="info-menu" style="margin-left: auto">
+              <div class="info-menu-item" id="transferRate"></div>
+              <div class="info-menu-item" id="latency"></div>
+              <div class="info-menu-item" id="fps"></div>
+            </div>
+            <div class="top-bar-item" id="time"></div>
+            <div class="top-bar-item">
+              <div class="battery-icon-container">
+              <div id="battery" class="battery-icon"></div>
+              <div class="battery-fill"></div>
+              <p class="battery-text"></p>
+            </div>
+        </div>
+      </div> 
+    <br>
+    <br>
+    <br>
+          
+
+          <h1 style="font-family: monospace; color: white;">Settings</h1>
+          <br>
+          <h2 style="font-family: monospace; color: white;">Tab Cloaking</h2>
+          <label style="font-family: monospace; color: white;" for="title-input" class="config-label">Title:</label>
+        <input type="text" id="title-input" class="config-input" width="20px">
+        <br>
+        <label style="font-family: monospace; color: white;" for="icon-input" class="config-label">Icon:</label>
+        <input type="text" id="icon-input" class="config-input">
+        <br>
+        <br>
+        <button class="button button1" id="save-button">Save Settings</button>
+    
+      <script>
+        const sections = document.querySelectorAll('.section');
+    const sidebarItems = document.querySelectorAll('.sidebar li');
+    
+    sidebarItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const sectionName = item.getAttribute('data-section');
+        showSection(sectionName);
+      });
+    });
+    
+    function showSection(sectionName) {
+      sections.forEach(section => {
+        if (section.getAttribute('data-section') === sectionName) {
+          section.classList.add('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+    }
+      </script>
+      <script>
+        function clearCache() {
+          localStorage.clear();
+          alert('Local Storage cache has been cleared.');
+          location.reload();
+        }
+      
+        function openImportFile() {
+          const fileInput = document.getElementById('importFile');
+          fileInput.addEventListener('change', handleImportFile, false);
+          fileInput.click();
+        }
+      
+        function handleImportFile(event) {
+          const file = event.target.files[0];
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            try {
+              const importedData = JSON.parse(e.target.result);
+              Object.keys(importedData).forEach((key) => {
+                localStorage.setItem(key, importedData[key]);
+              });
+              alert('Cache data imported successfully.');
+              location.reload();
+            } catch (error) {
+              alert('Error importing cache data. Please check the file format.');
+            }
+          };
+          reader.readAsText(file);
+        }
+      
+        function exportCache() {
+          const cacheData = {};
+          Object.keys(localStorage).forEach((key) => {
+            cacheData[key] = localStorage.getItem(key);
+          });
+          const exportedData = JSON.stringify(cacheData);
+      
+          const blob = new Blob([exportedData], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'cache_data.json';
+          link.click();
+          URL.revokeObjectURL(url);
+        }
+      </script>
+    <script>
+    function immortalize(arg) {
+        if (arg === 'sodium') {
+          localStorage.setItem('websiteCSS', 'immortal.css');
+    
+          console.log('Immortal Requested');
+          console.log('Initializing 3MB Tailwind Package...');
+    
+          const tailwindCSSLink = document.createElement('link');
+          tailwindCSSLink.rel = 'stylesheet';
+          tailwindCSSLink.href = 'https://cdn.tailwindcss.com/';
+          document.head.appendChild(tailwindCSSLink);
+    
+          setTimeout(() => {
+            console.log('Done!');
+            location.reload();
+          }, 2000);
+        }
+      }
+    
+      window.addEventListener('DOMContentLoaded', () => {
+        const command = 'immortalize("sodium")';
+        const consoleStyle = 'background: #333; color: #fff; padding: 5px; font-weight: bold;';
+        //console.log('%c Enter ' + command + ' to access the Easter Egg!', consoleStyle);
+        window.addEventListener('keydown', (event) => {
+          if (event.key === 'F12') {
+            const inputCommand = prompt('Please enter the Easter Egg command:');
+            if (inputCommand === command) {
+              immortalize('sodium');
+            }
+          }
+        });
+      });
+    </script>
+      <script>
+        function openCSSEditor() {
+          window.location.href = "/settings/css-editor/";
+        }
+    
+        function openCompactChecker() {
+          window.location.href = "/settings/compat/";
+        }
+      </script>
+
 </body>
 </html>
