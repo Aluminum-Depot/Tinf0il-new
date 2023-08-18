@@ -72,10 +72,10 @@ var apps = [
       'image': 'https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/SamCopeland/phpmeXx6V.png'
     },
     {
-      'id': 'fmovies',
-      'title': 'FMovies',
-      'url': 'https://fmovies.wtf/home',
-      'image': 'https://media.cdnandroid.com/item_images/1388353/imagen-fmovies-stream-movies-tv-0ori.jpg'
+      'id': 'movie-web',
+      'title': 'movieweb',
+      'url': 'https://movie-web.app/search/movie',
+      'image': 'https://docs.google.com/drawings/d/e/2PACX-1vSkig-KYmo2_05aFXQFMgnfVqL5SLi-CJu-BeK-pLZpyU73LNduuKE4N5uW4QcyjQbFGiZR3lA7BfsB/pub?w=960&h=720'
     },
     {
       'id': 'coolmathgames',
