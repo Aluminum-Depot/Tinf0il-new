@@ -72,8 +72,8 @@ var apps = [
       'image': 'https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/SamCopeland/phpmeXx6V.png'
     },
     {
-      'id': 'movie-web',
-      'title': 'movieweb',
+      'id': 'movieweb',
+      'title': 'movie-web',
       'url': 'https://movie-web.app/search/movie',
       'image': 'https://docs.google.com/drawings/d/e/2PACX-1vSkig-KYmo2_05aFXQFMgnfVqL5SLi-CJu-BeK-pLZpyU73LNduuKE4N5uW4QcyjQbFGiZR3lA7BfsB/pub?w=960&h=720'
     },
