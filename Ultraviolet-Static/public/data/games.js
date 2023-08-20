@@ -133,7 +133,7 @@ var games = [
     {
       'id': 'run3',
       'title': 'Run 3',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/run%203/Run%203.html',
+      'url': 'https://unblocked1889.github.io/R033/tn6pS9dCf37xAhkJv/',
       'image': 'https://play-lh.googleusercontent.com/A97ygyZMgnoapGfPhWZn9QBMsrskPuPQmJqeEtROZWnbQRfAOZZlhtP-UBWxaKtMI6U',
       'description': 'Run 3 is a classic game where you swerve through space in a race to the finish. Play hundreds of new levels in this fast-paced platformer'
     },
