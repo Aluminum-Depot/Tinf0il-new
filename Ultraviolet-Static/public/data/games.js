@@ -332,6 +332,12 @@ var games = [
       'image': 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQF9P7VGEeabiTldpe17vw3R85of7IjFQKxQ85Q7EC6sY3k8cw'
     },
     {
+      'id': 'lolbeans',
+      'title': 'LOLBeans.io',
+      'url': 'https://lolbeans.io/',
+      'image': 'https://docs.google.com/drawings/d/e/2PACX-19KwmwNMBX2iWXa9Zs63vcH86LK7Mw8vpL-uSScr8u6FDNph_SOhLx5jTjTBd7fqgkqE7PQn7YVS9akSbuEFKY6/pub?w=721&h=721'
+    },
+    {
       'id': 'roblox',
       'title': "Roblox",
       'url': 'https://nowgg.nl/play/roblox-corporation/5349/roblox',
