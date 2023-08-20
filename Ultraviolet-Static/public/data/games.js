@@ -232,7 +232,7 @@ var games = [
     {
       'id': 'geometrydash',
       'title': 'Geometry Dash',
-      'url': 'https://scratch.mit.edu/projects/105500895/embed',
+      'url': 'https://geometrydashlite.co/game/geometry-dash-lite/',
       'image': 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRIliRz-2X9ysEbRTRCr_Ujhl5nCiHgKKW6XjGMMqPvIlksny89'
     },
     {
