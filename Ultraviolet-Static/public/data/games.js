@@ -335,7 +335,7 @@ var games = [
       'id': 'lolbeans',
       'title': 'LOLBeans.io',
       'url': 'https://lolbeans.io/',
-      'image': 'https://docs.google.com/drawings/d/e/2PACX-19KwmwNMBX2iWXa9Zs63vcH86LK7Mw8vpL-uSScr8u6FDNph_SOhLx5jTjTBd7fqgkqE7PQn7YVS9akSbuEFKY6/pub?w=721&h=721'
+      'image': 'https://docs.google.com/drawings/d/e/2PACX-1vT1-WBgvZ-9RrSoiaF2l2orhPCahFQKcAUH7U1233H_noiDAAYEfu3rXS5_9OzYb65Sp-ujMb9h9cNm/pub?w=721&h=721'
     },
     {
       'id': 'roblox',
