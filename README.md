@@ -2,8 +2,8 @@
 
 <h1 align="center">Tinf0il</h1>
 
-Tinf0il is the fastest web proxy for Windows devices!
+Probe the internet privately
 
 ## Visit site
 
-[![Start unblocking now!](https://github.com/Aluminum-Depot/Tinf0il/blob/main/button.svg)](https://tinf0il.tech)
+[![Probe the internet privately](https://github.com/Aluminum-Depot/Tinf0il/blob/main/button.svg)](https://tinf0il.tech)
