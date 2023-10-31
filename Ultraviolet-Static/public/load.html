@@ -99,7 +99,7 @@
         document.querySelector("#gameImage").src = game.image
         document.querySelector("#gameTitle").innerHTML = game.title
         if (game.description) document.querySelector("#gameDescription").innerHTML = game.description
-        navigator.serviceWorker.register('./loadsw.js', {
+        navigator.serviceWorker.register('/uv/sw.js', {
           scope: __uv$config.prefix
         }).then(() => {
           document.querySelector("#frame").src = __uv$config.prefix + __uv$config.encodeUrl(game.url);
@@ -114,7 +114,7 @@
         document.querySelector("#gameImage").src = app.image
         document.querySelector("#gameTitle").innerHTML = app.title
         if (app.description) document.querySelector("#gameDescription").innerHTML = app.description
-        navigator.serviceWorker.register('./loadsw.js', {
+        navigator.serviceWorker.register('/uv/sw.js', {
           scope: __uv$config.prefix
           
         }).then(() => {
@@ -130,7 +130,7 @@
         //document.querySelector("#gameImage").src = util.image
         document.querySelector("#gameTitle").innerHTML = util.title
         if (util.description) document.querySelector("#gameDescription").innerHTML = util.description
-        navigator.serviceWorker.register('./loadsw.js', {
+        navigator.serviceWorker.register('/uv/sw.js', {
           scope: __uv$config.prefix
         }).then(() => {
           document.querySelector("#frame").src = __uv$config.prefix + __uv$config.encodeUrl(util.url);
