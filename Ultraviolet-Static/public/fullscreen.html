@@ -203,7 +203,7 @@ footer {
         document.title = `${game.title} | Tinf0il`
         if (game.note) document.querySelector("#note").innerHTML = game.note
         if (game.fullscreen) document.querySelector("#footer").style.display = "none"
-        navigator.serviceWorker.register('./loadsw.js', {
+        navigator.serviceWorker.register('/uv/sw.js', {
           scope: __uv$config.prefix
         }).then(() => {
           //document.querySelector("#theframe").src = __uv$config.prefix + __uv$config.encodeUrl(game.url);
@@ -217,7 +217,7 @@ footer {
       apps.forEach(app => {
         if (app.id != params.get("app")) return
         document.title = `${app.title} | Tinf0il`
-        navigator.serviceWorker.register('./loadsw.js', {
+        navigator.serviceWorker.register('/uv/sw.js', {
           scope: __uv$config.prefix
           
         }).then(() => {
@@ -227,7 +227,7 @@ footer {
         });
       })
     } else if (params.get('url')) {
-      navigator.serviceWorker.register('./loadsw.js', {
+      navigator.serviceWorker.register('/uv/sw.js', {
         scope: __uv$config.prefix
         
       }).then(() => {
@@ -238,7 +238,7 @@ footer {
       apps.forEach(app => {
         if (app.id != params.get("app")) return
         document.title = `${app.title} | Tinf0il`
-        navigator.serviceWorker.register('./loadsw.js', {
+        navigator.serviceWorker.register('/uv/sw.js', {
           scope: __uv$config.prefix
           
         }).then(() => {
