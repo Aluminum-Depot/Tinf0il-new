@@ -11,11 +11,15 @@
   
       const icon = localStorage.getItem('websiteIcon');
       if (icon) {
-        const favicon = document.getElementById('favicon');
-        if (favicon) {
-          favicon.href = icon;
-          favicon.setAttribute('type', 'image/png');
+        let favicon = document.getElementById('favicon');
+        if (!favicon) {
+          favicon = document.createElement("link");
+          favicon.id = "favicon"
+          document.head.appendChild(favicon);
         }
+        favicon.setAttribute('type', 'image/x-icon');
+        favicon.setAttribute('rel', 'icon');
+        favicon.href = icon
       }
   
       const css = localStorage.getItem('websiteCSS');
