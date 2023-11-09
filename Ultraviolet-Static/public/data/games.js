@@ -343,6 +343,12 @@ var games = [
       'url': 'https://nowgg.nl/play/roblox-corporation/5349/roblox',
       'image': 'https://play-lh.googleusercontent.com/WNWZaxi9RdJKe2GQM3vqXIAkk69mnIl4Cc8EyZcir2SKlVOxeUv9tZGfNTmNaLC717Ht'
     },
+    {
+      'id': 'arras.io',
+      'title': "arrasio",
+      'url': 'https://https://arras.io',
+      'image': 'https://docs.google.com/drawings/d/e/2PACX-1vSX2Jd4zmbEJH1CH5C-hkHlt_2ebaWmaStXjSnoKf4VO1C8WhPdjxRch8SmCd78mvzVnEzwun_1iLkX/pub?w=960&h=720'
+    },
   ]
   
   var customgames = JSON.parse(localStorage.getItem("customgames"))
