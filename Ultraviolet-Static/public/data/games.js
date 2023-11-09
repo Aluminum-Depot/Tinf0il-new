@@ -344,10 +344,16 @@ var games = [
       'image': 'https://play-lh.googleusercontent.com/WNWZaxi9RdJKe2GQM3vqXIAkk69mnIl4Cc8EyZcir2SKlVOxeUv9tZGfNTmNaLC717Ht'
     },
     {
-      'id': 'arras.io',
-      'title': "arrasio",
+      'id': 'arrasio',
+      'title': "arras.io",
       'url': 'https://https://arras.io',
       'image': 'https://docs.google.com/drawings/d/e/2PACX-1vSX2Jd4zmbEJH1CH5C-hkHlt_2ebaWmaStXjSnoKf4VO1C8WhPdjxRch8SmCd78mvzVnEzwun_1iLkX/pub?w=960&h=720'
+    },
+    {
+      'id': 'badtimesim',
+      'title': "Bad Time Simulator",
+      'url': 'https://jcw87.github.io/c2-sans-fight/',
+      'image': 'https://docs.google.com/drawings/d/e/2PACX-1vQYrqm499VqAmPKmpVm0CEw6LovxcxnDMZ3B_7ksNBk5-A06Tjtq5l-_AOVfVhA1-Uy8GeiVsSJHsJC/pub?w=514&h=516'
     },
   ]
   
