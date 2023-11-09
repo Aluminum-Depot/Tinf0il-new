@@ -355,6 +355,12 @@ var games = [
       'url': 'https://jcw87.github.io/c2-sans-fight/',
       'image': 'https://docs.google.com/drawings/d/e/2PACX-1vQYrqm499VqAmPKmpVm0CEw6LovxcxnDMZ3B_7ksNBk5-A06Tjtq5l-_AOVfVhA1-Uy8GeiVsSJHsJC/pub?w=514&h=516'
     },
+    {
+      'id': 'getawayshootout',
+      'title': "Getaway Shootout",
+      'url': 'https://ubg100.github.io/games/getaway-shootout/index.html',
+      'image': 'https://docs.google.com/drawings/d/e/2PACX-1vSYEitLVmG38SKscmqG-RQI5aEC45UCr4y6ym9wE_okDr1OHjKT9eju2gmwr0auGrvljmbkuwX7dOGI/pub?w=605&h=602'
+    },
   ]
   
   var customgames = JSON.parse(localStorage.getItem("customgames"))
