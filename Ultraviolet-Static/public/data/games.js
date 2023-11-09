@@ -251,7 +251,7 @@ var games = [
       'id': 'fruitninja',
       'title': 'Fruit Ninja',
       'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/fruitninja/index.html',
-      'image': 'https://downloadr2.apkmirror.com/wp-content/uploads/2019/01/5c5122d13cd72.png'
+      'image': 'https://docs.google.com/drawings/d/e/2PACX-1vQbb7bo7NayqEFUB7l6-vi4yjr0F_UWmxf8z8KOx9WZoukHjFGYpZsi8aXVfjApBIBNY3meD-LgVcGj/pub?w=245&h=245'
     },
     {
       'id': 'chromedino',
