@@ -346,7 +346,7 @@ var games = [
     {
       'id': 'arrasio',
       'title': "arras.io",
-      'url': 'https://https://arras.io',
+      'url': 'https://arras.io',
       'image': 'https://docs.google.com/drawings/d/e/2PACX-1vSX2Jd4zmbEJH1CH5C-hkHlt_2ebaWmaStXjSnoKf4VO1C8WhPdjxRch8SmCd78mvzVnEzwun_1iLkX/pub?w=960&h=720'
     },
     {
