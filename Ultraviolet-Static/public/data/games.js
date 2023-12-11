@@ -361,6 +361,12 @@ var games = [
       'url': 'https://ubg100.github.io/games/getaway-shootout/index.html',
       'image': 'https://docs.google.com/drawings/d/e/2PACX-1vSYEitLVmG38SKscmqG-RQI5aEC45UCr4y6ym9wE_okDr1OHjKT9eju2gmwr0auGrvljmbkuwX7dOGI/pub?w=605&h=602'
     },
+    {
+      'id': 'suika',
+      'title': "Suika Game",
+      'url': 'https://suikagame.com/',
+      'image': 'https://docs.google.com/drawings/d/e/2PACX-1vQ8gtFb6hU4_UrOiqeOMvbL8Q9Z1Rspox3EEc7UbnamFHYP9Cn4Dx0DS0W2-hswiEQAd5z_RrJiRZmF/pub?w=732&h=690'
+    },
   ]
   
   var customgames = JSON.parse(localStorage.getItem("customgames"))
