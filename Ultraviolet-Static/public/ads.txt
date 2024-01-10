@@ -1,1 +1,16 @@
-google.com, pub-2865967907877238, DIRECT, f08c47fec0942fa0
+google.com, pub-3944954862316283, RESELLER, f08c47fec0942fa0
+gumgum.com , 11483, DIRECT, ffdef49475d318a9
+rhythmone.com , 78519861, RESELLER, a670c89d4a324e47
+pubmatic.com, 157897, RESELLER, 5d62403b186f2ace
+appnexus.com , 2758, RESELLER, f5ab79cb980f11d1
+contextweb.com , 558355, RESELLER
+openx.com , 537149485, RESELLER, 6a698e2ec38604c6
+synacor.com , 82151, RESELLER, e108f11b2cdf7d5b
+emxdgt.com, 1284, RESELLER, 1e1d41537f7cad7f
+improvedigital.com , 1884, RESELLER
+admanmedia.com , 799, RESELLER
+rubiconproject.com , 23434, RESELLER, 0bfd66d529a55807
+smartadserver.com , 4005, RESELLER
+imds.tv , 82151, RESELLER, ae6c32151e71f19d
+inmobi.com , 5ca65892bdc34cc8a63ea3550cbd15d0, RESELLER, 83e75a7ae333ca9d
+video.unrulymedia.com, 78519861, RESELLER
