@@ -263,7 +263,7 @@ input[type=text]  {
 
 .set {
   width: 100vw !important;
-  height: 89vh !important; 
+  height: calc(100vh - 80px) !important; 
 }
 
 
