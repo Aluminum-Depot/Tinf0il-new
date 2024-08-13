@@ -21,15 +21,17 @@ var games = [
     {
       'id': 'thereisnogame',
       'title': 'There Is No Game',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/there-is-no-game/index.html',
-      'image': 'https://play-lh.googleusercontent.com/a6DfrYUL6viV0LAZFplqqA44gE0LHE0PyDnKHgdlydiUvccwzSBWrmRQSx5cjdL74Us=w240-h480-rw'
+      'url': '/games/there-is-no-game',
+      'image': 'https://play-lh.googleusercontent.com/a6DfrYUL6viV0LAZFplqqA44gE0LHE0PyDnKHgdlydiUvccwzSBWrmRQSx5cjdL74Us=w240-h480-rw',
+      'proxy': false
     },
     {
       'id': 'fbwg',
       'title': 'Fireboy and Watergirl',
       'description': 'A 2 player game where you have to work together using logic and teamwork to get to the finish line.',
-      'url': 'https://educationgg-23704.web.app/games/FBWG4-main/index.html',
-      'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjRWaerLDpxHaPNdfRCn8XuQosN4Al8tP5Lw&usqp=CAU'
+      'url': '/games/fireboywatergirlforesttemple',
+      'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjRWaerLDpxHaPNdfRCn8XuQosN4Al8tP5Lw&usqp=CAU',
+      'proxy': false
     },
     {
       'id': 'osu',
@@ -41,95 +43,110 @@ var games = [
     {
       'id': 'cuttherope',
       'title': 'Cut the Rope',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/ctr/index.html',
-      'image': 'https://play-lh.googleusercontent.com/8FNcAyLXtQB_0Ux2ZO8VZoEoihL6a5VMBNf6V2lydRM24hXLnNUdlEup1d5miVjl3JY'
+      'url': '/games/ctr',
+      'image': 'https://play-lh.googleusercontent.com/8FNcAyLXtQB_0Ux2ZO8VZoEoihL6a5VMBNf6V2lydRM24hXLnNUdlEup1d5miVjl3JY',
+      'proxy': false
     },
     {
       'id': 'youarebezos',
       'title': 'You are Bezos',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/you-are-bezos/index.html',
-      'image': 'https://img.itch.zone/aW1nLzE1NzI2NjIucG5n/original/Equhiy.png'
+      'url': '/games/you-are-bezos',
+      'image': 'https://img.itch.zone/aW1nLzE1NzI2NjIucG5n/original/Equhiy.png',
+      'proxy': false
     },
     {
       'id': 'papaburgers',
       'title': 'Papa\'s Burgeria',
-      'url': 'https://mazahacka2017.github.io/papas-burgeria',
-      'image': 'https://cdn2.steamgriddb.com/file/sgdb-cdn/icon_thumb/ca529f0fe8b0c42a40d52288a30bd915.png'
+      'url': '/games/papasburgeria',
+      'image': 'https://cdn2.steamgriddb.com/file/sgdb-cdn/icon_thumb/ca529f0fe8b0c42a40d52288a30bd915.png',
+      'proxy': false
     },
     {
       'id': 'papasicecream',
       'title': 'Papa\'s Scooperia',
-      'url': 'https://dynamicruffle.vercel.app/?play=papascoop',
-      'image': 'https://play-lh.googleusercontent.com/KpLBHo89bWG3jmuYb_KqDD1rZSY4XzXcHiMLZ1PCv83GMwVMcJluuuXrT32oQGCo51A'
+      'url': '/games/scooperia',
+      'image': 'https://play-lh.googleusercontent.com/KpLBHo89bWG3jmuYb_KqDD1rZSY4XzXcHiMLZ1PCv83GMwVMcJluuuXrT32oQGCo51A',
+      'proxy': false
     },
     {
       'id': 'jetpackjoyride',
       'title': 'Jetpack Joyride',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/21ac7257444af1713884b35045938d57e88a4993/jetpack-joyride/index.html',
+      'url': '/games/jetpack-joyride/',
       'image': 'https://play-lh.googleusercontent.com/Pl2nmu5U9CH3NQqLBTjnokoV325zESrX6KIaHrwSqREEJDWIv1yJpRCXzl9r3oMnEWHC',
+      'proxy': false
     },
-    {
-      'id': 'shellshockers',
-      'title': 'Shell Shockers',
-      'description': 'Shell Shockers is unique online shooter in first-person perspective where all the characters are represented exclusively by eggs.',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/shellshockers/index.html',
-      'image': 'https://play-lh.googleusercontent.com/P-nde227L29s8w5U44kTPLiEnMEJUhJpEr4jL6tD6LV65Xz0JZtI4wEyFN-smsNrx-Q'
-    },
+    // {
+    //   'id': 'shellshockers',
+    //   'title': 'Shell Shockers',
+    //   'description': 'Shell Shockers is unique online shooter in first-person perspective where all the characters are represented exclusively by eggs.',
+    //   'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/shellshockers/index.html',
+    //   'image': 'https://play-lh.googleusercontent.com/P-nde227L29s8w5U44kTPLiEnMEJUhJpEr4jL6tD6LV65Xz0JZtI4wEyFN-smsNrx-Q'
+    // },
     {
       'id': 'motox3m',
       'title': 'MotoX3M',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/motox3m/index.html',
-      'image': 'https://play-lh.googleusercontent.com/AbQMuT4ncBfWDqNF-4ubmfaRag59nrW3fJARDsHK51_PENScmWCnMFeQX81wfPlfGBo'
+      'url': '/games/motox3m',
+      'image': 'https://play-lh.googleusercontent.com/AbQMuT4ncBfWDqNF-4ubmfaRag59nrW3fJARDsHK51_PENScmWCnMFeQX81wfPlfGBo',
+      'proxy': false
     },
     {
       'id': 'thefinalearth',
       'title': 'The Final Earth',
       'description': 'Earth has been destroyed. It\'s a good thing you teleported to a new planet, also known as The Final Earth. Gather resources and build a colony',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/the-final-earth/index.html',
-      'image': 'https://img.itch.zone/aW1nLzIyMTU1NDAucG5n/original/6vGlZe.png'
+      'url': '/games/the-final-earth',
+      'image': 'https://img.itch.zone/aW1nLzIyMTU1NDAucG5n/original/6vGlZe.png',
+      'proxy': false
     },
     {
       'id': 'fnf',
       'title': 'Friday Night Funkin',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/21ac7257444af1713884b35045938d57e88a4993/fridaynightfunkin/index.html',
-      'image': 'https://image.spreadshirtmedia.com/image-server/v1/designs/1037919514,width=178,height=178.png'
+      'url': '/games/fridaynightfunkin',
+      'image': 'https://image.spreadshirtmedia.com/image-server/v1/designs/1037919514,width=178,height=178.png',
+      'proxy': false
     },
     {
       'id': 'paperio2',
       'title': 'Paper.io 2',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/21ac7257444af1713884b35045938d57e88a4993/paperio2/index.html',
-      'image': 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSK4PSwPySjJi26ilZMiNG_L6U6DuAcyhvR3Z99p49Mil7AoVz'
+      'url': '/games/paperio2',
+      'image': 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSK4PSwPySjJi26ilZMiNG_L6U6DuAcyhvR3Z99p49Mil7AoVz',
+      'proxy': false
     },
     {
       'id': 'impossiblequiz',
       'title': 'The Impossible Quiz',
-      'url': 'https://proudparrot2.github.io/msg-archive/g_mes/impossiblequiz1/impossiblequiz1/index.html',
-      'image': 'https://ih1.redbubble.net/image.489460698.9522/st,small,507x507-pad,600x600,f8f8f8.jpg'
+      'url': '/games/impossiblequiz',
+      'image': 'https://ih1.redbubble.net/image.489460698.9522/st,small,507x507-pad,600x600,f8f8f8.jpg',
+      'proxy': false
     },
     {
       'id': 'ducklife4',
       'title': 'Duck Life 4',
-      'url': 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fduck-life-4.xml',
-      'image': 'https://play-lh.googleusercontent.com/AUGkRrKMtUCLVE9vCvlfMY9Ny9EBqzx17yejVtEEhvpkw-H6lJlvBHgCMqPJm8HV_tM'
+      'url': '/games/ducklife4',
+      'image': 'https://play-lh.googleusercontent.com/AUGkRrKMtUCLVE9vCvlfMY9Ny9EBqzx17yejVtEEhvpkw-H6lJlvBHgCMqPJm8HV_tM',
+      'proxy': false
     },
     {
       'id': 'retrobowl',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/21ac7257444af1713884b35045938d57e88a4993/retro-bowl/index.html',
+      'url': '/games/retro-bowl',
       'title': 'Retro Bowl',
-      'image': 'https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ'
+      'image': 'https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ',
+      'proxy': false
     },
     {
       'id': 'templerun2',
       'title': 'Temple Run 2',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/21ac7257444af1713884b35045938d57e88a4993/temple-run-2/index.html',
-      'image': 'https://play-lh.googleusercontent.com/go4XqS4mYs-G2tZymiVLF4wJYXIi5QrvwixNRzssk4G_vRBHrAdg4E1ddNwy9c2cZA'
+      'url': '/games/temple-run-2',
+      'image': 'https://play-lh.googleusercontent.com/go4XqS4mYs-G2tZymiVLF4wJYXIi5QrvwixNRzssk4G_vRBHrAdg4E1ddNwy9c2cZA',
+      'proxy': false
     },
     {
       'id': 'stickmanhook',
       'title': 'Stickman Hook',
-      'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/stickman-hook/index.html',
-      'image': 'https://play-lh.googleusercontent.com/yXqBI1Vb1b-xjwmXLE2T7FQbgHIxfvjze1b6jO2aLHfy8Y8ta7NFSEVqZoPHtM2Ajyrl'
+      'url': '/games/stickman-hook',
+      'image': 'https://play-lh.googleusercontent.com/yXqBI1Vb1b-xjwmXLE2T7FQbgHIxfvjze1b6jO2aLHfy8Y8ta7NFSEVqZoPHtM2Ajyrl',
+      'proxy': false
     },
+    // TODO: FINISH REST OF GAMES
     {
       'id': 'run3',
       'title': 'Run 3',
