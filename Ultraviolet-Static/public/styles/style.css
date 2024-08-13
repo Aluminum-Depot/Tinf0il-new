@@ -190,7 +190,7 @@ input:checked+.slider:before {
   font-family: "DM Sans";
   cursor: pointer;
   transition: all 0.3s;
-  padding: 1rem;
+  padding-top: 1rem;
   margin: 3px;
   text-align: center;
   width: 10%;
