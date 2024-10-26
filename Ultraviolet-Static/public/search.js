@@ -17,7 +17,6 @@ function search(input, template) {
   try {
     // input is a valid URL when http:// is added to the start:
     // eg: example.com, https://example.com/test?q=param
-    const url = new URL(`http://${input}`);
     // only if the hostname has a TLD/subdomain
     if (url.hostname.includes(".")) return url.toString();
   } catch (err) {
