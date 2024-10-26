@@ -148,6 +148,16 @@ img.rounded-corners {
 #uv-register-sw.show {
   display: block;
 }
+#uv-frame {
+  z-index: 100;
+  border: none;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100vw;
+  height: 90vh;
+  background-color: white;
+}
 
 .logo {
   width: 150px;

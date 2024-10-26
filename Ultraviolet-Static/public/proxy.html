@@ -36,12 +36,12 @@
     href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
     rel="stylesheet"/>
     <link rel="stylesheet" href="proxy.css" />
+    <script src="baremux/index.js" defer></script>
     <script src="uv/uv.bundle.js" defer></script>
     <script src="uv/uv.config.js" defer></script>
     <script src="register-sw.js" defer></script>
     <script src="search.js" defer></script>
     <script src="index.js" defer></script>
-    <script src="js/cloak.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -158,10 +158,15 @@
       value="https://www.google.com/search?q=%s"
       type="hidden"
     />
-    <input id="uv-address" type="text" class="p-2 bg-light pl-1" placeholder="Probe the internet privately" autocomplete="off"/>
-
-
+    <input id="uv-address" type="text" placeholder="Search the web freely" />
   </form>
+  <div class="desc left-margin">
+    <p id="uv-error"></p>
+    <pre id="uv-error-code"></pre>
+  </div>
+  <div>
+    <iframe style="display: none" id="uv-frame"></iframe>
+  </div>
 
   
 
