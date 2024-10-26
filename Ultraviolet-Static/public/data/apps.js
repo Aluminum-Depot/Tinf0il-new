@@ -5,9 +5,9 @@ var apps = [
       'image': 'addicon.png'
     },
     {
-      "id": "google",
-      "title": "Google",
-      "url": "https://www.google.com/?safe=active&ssui=on",
+      "id": 'google',
+      "title": 'Google',
+      "url": 'https://www.google.com/?safe=active&ssui=on',
       'image': 'https://img.freepik.com/free-icon/search_318-265146.jpg'
       
     },
@@ -36,9 +36,9 @@ var apps = [
       'image': 'https://sf-tb-sg.ibytedtos.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png'
     },
     {
-      'id': 'nowgg',
-      'title': 'now.gg',
-      'url': 'https://now.gg',
+      'id': "nowgg",
+      'title': "now.gg",
+      'url': "https://now.gg",
       'image': 'https://uploads-ssl.webflow.com/60f008ba9757da0940af288e/6232d610e4172bed260d4cfd_9Dw5vXGi_400x400.jpeg',
     },
     {
