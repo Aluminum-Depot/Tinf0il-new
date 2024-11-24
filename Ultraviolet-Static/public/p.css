@@ -8,6 +8,14 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+.nav {
+  transition: all 0.2s ease-in-out;
+}
+.nav:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+}
 * {
   overflow: hidden;
 }
