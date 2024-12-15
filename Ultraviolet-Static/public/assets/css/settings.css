@@ -1,0 +1,146 @@
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 60px;
+}
+h2 {
+  color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 100;
+  left: 0;
+  right: 0;
+  background-color: #1e1e1e;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.sidebar {
+  background-color: transparent;
+  width: 250px;
+  padding: 20px;
+  height: 75vh;
+  position: fixed;
+  left: 0;
+  top: 45px;
+  overflow-y: auto;
+}
+
+.sidebar h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.section {
+  display: none;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.section.active {
+  display: block;
+  opacity: 1;
+}
+
+.reset-button {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+.reset-button:hover {
+  background-color: darkred;
+}
+
+.sidebar-buttons {
+  position: absolute;
+  bottom: 0px;
+  width: 75%;
+}
+
+.config-input {
+  width: 400px;
+  /* Adjust this value to your desired width */
+}
+
+#save-button {
+  width: 200px;
+  /* You can set a specific width if needed */
+}
+
+body {
+  margin: 0;
+  background-color: #111;
+  /* Set your background color */
+}
+
+.f {
+  display: flex;
+  padding: 20px;
+  height: auto;
+}
+.settingstuff {
+  padding-top: 10px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  width: 30vw;
+  transition-duration: 0.5s;
+}
+.settingstuff:hover {
+  background-color: #1d1d1d;
+}
+p {
+  text-align: center;
+  color: #c1baba;
+  font-size: 120%;
+}
+input {
+  width: 80%;
+}
+.button {
+  background-color: #fff;
+  border: none;
+  color: black;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: monospace;
+  margin: 4px 10px;
+  border-radius: 8px;
+}
